@@ -17,7 +17,7 @@ const config = {
 };
 
 config.e2e = {
-    baseUrl: "https://demoqa.com",
+    baseUrl: "https://ecommerce-playground.lambdatest.io",
     specPattern: ["cypress/bdd-style/features/**/*.{feature,js}", "cypress/spec-style/specs/**/*.{js}"],
     supportFile: 'cypress/support/e2e.js',
     screenshotsFolder: "cypress/screenshots",

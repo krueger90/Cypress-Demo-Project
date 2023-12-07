@@ -1,7 +1,10 @@
 import { When } from "@badeball/cypress-cucumber-preprocessor";
+import { RegisterUser } from "../../page-objects/RegisterUser";
+const registerUser = new RegisterUser();
 
-When('I navigate to the Book Store application', () => {
-    cy.visit('/login');
-});
-When('I click on the Login button', () => {
+When ('I fill in all the required details', ()=>{
+  registerUser.fillRegistrationForm();
+})
+When('Agree to the Privacy Policy', () => {
+  registerUser.agreePolicy();
 })
