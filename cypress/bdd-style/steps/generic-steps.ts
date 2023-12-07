@@ -7,3 +7,8 @@ Given('I navigate to the SUT', () => {
 When('I navigate to the {string} page', (route: string) => {
     cy.visit(CY_ROUTES.get(route));
 });
+
+When('I click on the {string} button', (button: string) => {
+    cy.contains(button).click();
+  })
+  
