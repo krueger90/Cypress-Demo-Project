@@ -31,7 +31,7 @@
   },
   "cypress-cucumber-preprocessor": {
     "nonGlobalStepDefinitions": false,
-    "stepDefinitions": "cypress/bdd-style/steps",
+    "stepDefinitions": "cypress/bdd-style/steps/*.ts",
     "cucumberJson": {
       "generate": true,
       "outputFolder": "cypress/reports/cucumber",

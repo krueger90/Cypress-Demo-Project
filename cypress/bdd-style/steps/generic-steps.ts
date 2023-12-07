@@ -1,5 +1,5 @@
 import { Given } from '@badeball/cypress-cucumber-preprocessor';
 
-Given('I navigate to the SUT', () => {
-cy.visit('/');
+Given ('I navigate to the SUT', ()=>{
+ cy.visit('/');
 });
