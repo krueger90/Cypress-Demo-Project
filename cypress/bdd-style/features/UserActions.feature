@@ -1,4 +1,4 @@
-Feature: Register new user on the ecommerce site
+Feature: Various user actions on the ecommerce site
 
 Background:
     Given I navigate to the SUT
@@ -12,3 +12,9 @@ Scenario: Register user
     When I click on the "Continue" button
     Then The user is redirected to the account page
 
+Scenario: Login user and place order
+    When I navigate to the "Login" page
+    And I fill in the login details
+    And I login
+    Then The user is redirected to the account page
+    When I search for "HTC" products 

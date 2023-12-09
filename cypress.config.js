@@ -13,7 +13,7 @@ const config = {
         openMode: 0
     },
     defaultCommandTimeout: 10000,
-    pageLoadTimeout: 60000
+    pageLoadTimeout: 60000,
 };
 
 config.e2e = {

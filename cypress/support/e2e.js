@@ -14,7 +14,11 @@
 // ***********************************************************
 
 // Import commands.js using ES2015 syntax:
-import './commands'
+// import './commands'
 
 // Alternatively you can use CommonJS syntax:
-// require('./commands')
+// require('./commands');
+import {USERS} from './generate-user';
+before(() => {
+    cy.writeFile('cypress/fixtures/userData.json', USERS);
+})

@@ -3,7 +3,7 @@ import { RegisterUser } from "../../page-objects/RegisterUser";
 import { assertUrlContains } from "../asserts/generic-asserts";
 const registerUser = new RegisterUser();
 
-When ('I fill in all the required details', ()=>{
+When('I fill in all the required details', () => {
   registerUser.fillRegistrationForm();
 })
 When('Agree to the Privacy Policy', () => {

@@ -9,6 +9,5 @@ When('I navigate to the {string} page', (route: string) => {
 });
 
 When('I click on the {string} button', (button: string) => {
-    cy.contains(button).click();
-  })
-  
+    cy.contains(button).click({force: true});
+})
