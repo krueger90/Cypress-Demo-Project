@@ -6,11 +6,10 @@ The purpose of this project is to demonstrate my abilities in framework setup, t
 
 Pre-requirements
 
-    I used versions v20.10.0 and 10.2.3 of NodeJs and npm respectively. You use the same or later versions.
-
+I used versions v20.10.0 and 10.2.3 of NodeJs and npm respectively. You can use the same or later versions.
 # Installation
 
-    Run npm install to install the dev dependencies.
+   Run npm install to install dev dependencies.
 
 Tests
 
