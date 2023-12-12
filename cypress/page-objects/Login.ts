@@ -1,9 +1,9 @@
 export class Login {
 
     fillLoginForm(): void {
-        cy.fixture('userData').then(userData => {
-            cy.get("[id=input-email]").type(userData[0].email);
-            cy.get("[id=input-password]").type(userData[0].password);
+        cy.fixture('loginUserData').then(loginUserData => {
+            cy.get("[id=input-email]").type(loginUserData.email);
+            cy.get("[id=input-password]").type(loginUserData.password);
         })
     }
 

@@ -20,5 +20,5 @@
 // require('./commands');
 import {USERS} from './generate-user';
 before(() => {
-    cy.writeFile('cypress/fixtures/userData.json', USERS);
+    cy.writeFile('cypress/fixtures/registerUserData.json', USERS);
 })

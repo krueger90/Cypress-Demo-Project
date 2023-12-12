@@ -30,6 +30,15 @@ config.e2e = {
                 plugins: [createEsbuildPlugin(config)],
             })
         );
+        //getter and setter for data stored in node process 
+        on('task', {
+            storeDetails: (value) => {
+                return (prodDetails = value)
+            },
+            getDetails: () => {
+                return prodDetails
+            }
+        })
         return config;
     }
 }

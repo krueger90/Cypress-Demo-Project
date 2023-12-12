@@ -10,4 +10,4 @@ function createRandomUser() {
     };
 }
 
-export const USERS = faker.helpers.multiple(createRandomUser, { count: 1, });
+export const USERS = faker.helpers.multiple(createRandomUser, { count: 1 });
