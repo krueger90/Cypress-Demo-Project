@@ -2,3 +2,6 @@
 /.vscode
 cypress/fixtures/registerUserData.json
 cypress/reports
+cypress/screenshots/*
+cypress/downloads/*
+cypress/videos/*

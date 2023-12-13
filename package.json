@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "cypress:open": "npx cypress open",
-    "cypress:run-local": "rimraf cypress/reports & npx cypress run --quiet --headless --browser chrome --reporter mochawesome & npx mochawesome-merge \"cypress/reports/*.json\" > mochawesome.json & npx marge mochawesome.json",
+    "cypress:run-local": "rimraf cypress/reports & npx cypress run --quiet --headless --browser chrome --reporter mochawesome & npx mochawesome-merge \"cypress/reports/*.json\" > cypress/reports/mochawesome.json & npx marge mochawesome.json",
     "cypress:run-pipeline":""
   },
   "repository": {
