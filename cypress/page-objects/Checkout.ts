@@ -7,7 +7,6 @@ export class Checkout {
 
     fillBillingDetails(address: string): void {
 
-        cy.waitForNetworkIdle('+(POST|GET)', '*', 500, { log: false });
         if (address === "existing") {
             cy.get('[id=payment-existing]').should('be.visible');
             agreePolicy();
@@ -21,11 +20,12 @@ export class Checkout {
             cy.get("[id=input-payment-country]").select("United Kingdom");
             cy.get("[id=input-payment-zone]").select("Worcestershire");
             agreePolicy();
+            cy.waitForNetworkIdle('+(POST|GET)', '*', 800, { log: false });
         }
     }
 
     compareProductDetails(): void {
-        cy.waitForNetworkIdle('+(POST|GET)', '*', 500, { log: false });
+        cy.waitForNetworkIdle('+(POST|GET)', '*', 800, { log: false });
         cy.task('getDetails').then(prodDetails => {
             cy.get('tbody tr')
                 .find('td')

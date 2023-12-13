@@ -26,7 +26,6 @@ describe('Register User', () => {
     });
 });
 
-
 describe('Login and place order', () => {
 
     beforeEach(() => {
