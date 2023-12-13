@@ -14,6 +14,13 @@ const config = {
     },
     defaultCommandTimeout: 10000,
     pageLoadTimeout: 60000,
+    reporter: 'mochawesome',
+    reporterOptions: {
+        reportDir: 'cypress/reports',
+        overwrite: false,
+        html: false,
+        json: true
+    }
 };
 
 config.e2e = {
