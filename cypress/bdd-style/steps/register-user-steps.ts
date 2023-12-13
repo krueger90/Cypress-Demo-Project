@@ -6,11 +6,11 @@ const registerUser = new RegisterUser();
 
 When('I fill in all the required details', () => {
   registerUser.fillRegistrationForm();
-})
+});
 When('Agree to the Privacy Policy', () => {
   agreePolicy();
-})
+});
 
 Then('the user is registered', () => {
   assertUrlContains("route=account/success");
-})
+});

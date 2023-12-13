@@ -14,7 +14,9 @@ export class Homepage {
             .get('[title="Buy now"]').click();
     }
 
-    //Creates an object and stores it in the Node process to be retrieved later
+    /**
+     *Creates an object and stores it in the Node process to be retrieved later  
+     */
     saveProductDetails() {
         const productDetails = {
             productName: "",
@@ -37,18 +39,20 @@ export class Homepage {
         });
         cy.task('storeDetails', productDetails);
     }
-//nu merge
-    clearCart(): void {
-        cy.get('[href="#cart-total-drawer"]')
-            .eq(1)
-            .click()
-            .get('#entry_217850 > .icon-right')
-            .click()
-            .get('tbody tr')
-            .find('td').then(tableData =>{
-                cy.wrap(tableData).eq(2).get('[data-original-title="Remove"]').click();
-            })
-            
 
+    clearCart(): void {
+        cy.get('#entry_217825 > a > div.cart-icon > span').invoke('text').then(element => {
+            if (element.valueOf() != "0") {
+                cy.get('[href="#cart-total-drawer"]')
+                    .eq(1)
+                    .click()
+                    .get('#entry_217850 > .icon-right')
+                    .click()
+                    .get('tbody tr')
+                    .find('td').then(tableData => {
+                        cy.wrap(tableData).eq(15).get('[title="Remove"]').click();
+                    });
+            }
+        })
     }
 }

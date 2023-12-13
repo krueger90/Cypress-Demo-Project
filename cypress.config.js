@@ -18,7 +18,7 @@ const config = {
 
 config.e2e = {
     baseUrl: "https://ecommerce-playground.lambdatest.io",
-    specPattern: ["cypress/bdd-style/features/**/*.{feature,js}", "cypress/spec-style/specs/**/*.{js}"],
+    specPattern: ["cypress/bdd-style/features/**/*.{feature,js}", "cypress/spec-style/**/*.{cy,js,ts,spec}"],
     supportFile: 'cypress/support/e2e.js',
     screenshotsFolder: "cypress/screenshots",
     videosFolder: "cypress/videos",

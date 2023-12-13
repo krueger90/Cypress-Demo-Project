@@ -11,5 +11,11 @@ When('I fill in the required checkout details and use an {string} address', (add
     checkout.fillBillingDetails(address);
 });
 When('Verify if the order is correct', () => {
-    checkout.compareProductDetails()
+    checkout.compareProductDetails();
+});
+When('I confirm the order', () => {
+    cy.get('[id="button-confirm"]').click();
+});
+Then('The order is placed', () => {
+    assertUrlContains("route=checkout/success");
 });

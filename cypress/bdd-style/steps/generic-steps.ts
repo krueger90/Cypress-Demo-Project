@@ -20,9 +20,11 @@ Then('I am redirected to the account page', () => {
     assertUrlContains("route=account/account");
 });
 
-//This step is used in case of test failure, 
-//if a test fails, it will leave the product in cart, 
-//causing an assert on the number of items to fail 
+  /**
+   * This is used in case of test failure, 
+   * if a test fails, it will leave the product in cart,
+   * causing an assert on the number of items to fail
+   */
 When('I clear the cart', () => {
     homepage.clearCart();
 }); 

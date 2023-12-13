@@ -9,4 +9,5 @@ When('I search for {string} products', (value: string) => {
 When('Add a product to cart with Buy Now', () => {
     homepage.getProduct();
     homepage.saveProductDetails();
+    cy.intercept('**/index.php?route=*').as('waitForCall');
 });

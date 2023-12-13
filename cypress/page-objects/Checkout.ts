@@ -1,17 +1,15 @@
 import { faker } from "@faker-js/faker";
 import { agreePolicy } from "../support/general-methods";
+import 'cypress-network-idle';
 
 export class Checkout {
 
-    //add waits
-    fillBillingDetails(address: string): void {
-    
-        // cy.intercept('**/index.php?route=*').as('waitForCall');
 
-        cy.wait(7000);
+    fillBillingDetails(address: string): void {
+
+        cy.waitForNetworkIdle('+(POST|GET)', '*', 500, { log: false });
         if (address === "existing") {
             cy.get('[id=payment-existing]').should('be.visible');
-
             agreePolicy();
         } else {
             cy.get('[id=input-payment-address-new]').click({ force: true });
@@ -26,13 +24,8 @@ export class Checkout {
         }
     }
 
-    //add waits
     compareProductDetails(): void {
-        // cy.intercept('**/index.php?route=extension/maza/checkout/save').as('waitForConfirmPage');
-
-
-        // cy.wait('@waitForConfirmPage');
-        cy.wait(7000)
+        cy.waitForNetworkIdle('+(POST|GET)', '*', 500, { log: false });
         cy.task('getDetails').then(prodDetails => {
             cy.get('tbody tr')
                 .find('td')
@@ -46,5 +39,3 @@ export class Checkout {
 
     }
 }
-
-
