@@ -24,6 +24,7 @@ jobs:
          npx cypress cache path
          npx cypress cache list
          npx cypress verify
+         cd cypress-demo-project
          mkdir -p screenshots
          mkdir -p videos
 
