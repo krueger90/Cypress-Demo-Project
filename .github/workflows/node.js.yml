@@ -36,6 +36,7 @@ jobs:
 
       - name: Copy test execution artifacts
         run: |
+          mkdir -p public
           cp -r cypress/screenshots public/screenshots
           cp -r cypress/videos public/videos
       
