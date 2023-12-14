@@ -20,7 +20,7 @@ jobs:
 
       - name: Install
         run: |
-         npm ci
+         npm install
           $(npm bin)/cypress cache path
           $(npm bin)/cypress cache list
           $(npm bin)/cypress verify
