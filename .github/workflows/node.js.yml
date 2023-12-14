@@ -25,6 +25,7 @@ jobs:
          npx cypress cache list
          npx cypress verify
          cd cypress
+         mkdir -p reports
          mkdir -p screenshots
          mkdir -p videos
 
@@ -34,12 +35,12 @@ jobs:
 
       - name: Copy test execution artifacts
         run: |
-          mkdir -p cypress-artifacts
-          cp -r cypress/screenshots cypress-artifacts/screenshots
-          cp -r cypress/videos cypress-artifacts/videos
+          mkdir -p public
+          cp -r cypress/screenshots public/screenshots
+          cp -r cypress/videos public/videos
       
       - name: Deploy report page
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{secrets.GITHUB_TOKEN}}
-          publish_dir: ./cypress-artifacts   
+          publish_dir: ./public  
