@@ -8,6 +8,7 @@ const config = {
     viewportHeight: 1080,
     viewportWidth: 1920,
     videoCompression: 30,
+    videoUploadOnPasses: false,
     retries: {
         runMode: 1,
         openMode: 0

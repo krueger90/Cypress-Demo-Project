@@ -24,6 +24,8 @@ jobs:
          npx cypress cache path
          npx cypress cache list
          npx cypress verify
+         mkdir -p screenshots
+         mkdir -p videos
 
       - name: Run tests
         run: npm run cypress:run-pipeline
