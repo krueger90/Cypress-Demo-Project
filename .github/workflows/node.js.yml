@@ -28,6 +28,7 @@ jobs:
          mkdir -p reports
          mkdir -p screenshots
          mkdir -p videos
+         mkdir -p public
 
       - name: Run tests
         run: npm run cypress:run-pipeline
@@ -35,7 +36,6 @@ jobs:
 
       - name: Copy test execution artifacts
         run: |
-          mkdir -p public
           cp -r cypress/screenshots public/screenshots
           cp -r cypress/videos public/videos
       

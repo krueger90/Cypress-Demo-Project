@@ -14,5 +14,5 @@ I used versions **v20.10.0** and **10.2.3** of Node.js and npm respectively. The
 
 ## Tests
 
-   Run `npm run cypress:open` if you want to bring up the GUI and select yourself what tests to execute, or, run `npm run cypress:run`, to run the tests in headless mode and to generate a report.
+   Run `npm run cypress:open` if you want to bring up the GUI and select yourself what tests to execute, or, run `npm run cypress:run-local`, to run the tests in headless mode and to generate a report.
 

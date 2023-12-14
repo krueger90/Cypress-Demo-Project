@@ -6,7 +6,7 @@
   "scripts": {
     "cypress:open": "npx cypress open",
     "cypress:run-local": "rimraf cypress/reports & npx cypress run --quiet --headless --browser chrome --reporter mochawesome & npx mochawesome-merge \"cypress/reports/*.json\" -o cypress/reports/mochawesome.json & npx marge cypress/reports/mochawesome.json -f report -o cypress/reports/mocha",
-    "cypress:run-pipeline":"rm -rf cypress/reports && npx cypress run --quiet --headless --browser chrome --reporter mochawesome && npx mochawesome-merge \"cypress/reports/*.json\" -o cypress/reports/mochawesome.json && npx marge cypress/reports/mochawesome.json --reportDir public --assetsDir public/assets --reportPageTitle index.html"
+    "cypress:run-pipeline": "npx cypress run --quiet --headless --browser chrome --reporter mochawesome && npx mochawesome-merge \"cypress/reports/*.json\" > index.json && npx marge index.json --reportDir public --assetsDir public/assets --reportPageTitle index.html"
   },
   "repository": {
     "type": "git",
@@ -32,7 +32,6 @@
     "mochawesome": "^7.1.3",
     "mochawesome-merge": "^4.3.0",
     "mochawesome-report-generator": "^6.2.0",
-    "resolve": "^1.22.8",
     "typescript": "^5.3.2",
     "webpack": "^5.89.0"
   },
