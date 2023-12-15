@@ -21,7 +21,6 @@ jobs:
         with:
           name: cypress-execution-report
           path: |
-            ./mochawesome-report
+            cypress/reports/mocha
             cypress/screenshots
-            cypress/videos
           retention-days: 30  
