@@ -7,7 +7,6 @@ const config = {
     chromeWebSecurity: false,
     viewportHeight: 1080,
     viewportWidth: 1920,
-    videoCompression: 30,
     retries: {
         runMode: 1,
         openMode: 0
@@ -28,7 +27,6 @@ config.e2e = {
     specPattern: ["cypress/bdd-style/features/**/*.{feature,js}", "cypress/spec-style/**/*.{cy,js,ts,spec}"],
     supportFile: 'cypress/support/e2e.js',
     screenshotsFolder: "cypress/screenshots",
-    videosFolder: "cypress/videos",
     setupNodeEvents(on, config) {
         addCucumberPreprocessorPlugin(on, config);
 
@@ -48,7 +46,7 @@ config.e2e = {
         })
 
         on('before:browser:launch', (browser = {}, launchOptions) => {
-            launchOptions.args.push('--auto-open-devtools-for-tabs');
+            launchOptions.args.push('--disable-dev-shm-usage','--auto-open-devtools-for-tabs');
             return launchOptions;
         })
         return config;
