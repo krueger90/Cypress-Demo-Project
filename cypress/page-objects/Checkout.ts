@@ -6,7 +6,6 @@ export class Checkout {
 
 
     fillBillingDetails(address: string): void {
-
         if (address === "existing") {
             cy.get('[id=payment-existing]').should('be.visible');
             agreePolicy();
